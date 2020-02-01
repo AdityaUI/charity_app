@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
   bool val = false;
-  onSwitchValuseChanged(bool newVal){  void setState(Null Function() param0) {
+  onSwitchValuseChanged(bool newVal){
+    void setState(Null Function() param0) {
     setState((){
       val = newVal;
     });
@@ -17,22 +18,6 @@ class ProfilePage extends StatelessWidget {
               image: AssetImage("assets/image2.png"),
               fit: BoxFit.contain,
               width: double.infinity,
-            ),
-            Positioned(
-              top: 60,
-              left: 30,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text("My Profile",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 35,
-                        fontFamily: "CentraleSansRegular",
-                      )),
-
-                ],
-              ),
             ),
             Positioned(
                 top: 515,

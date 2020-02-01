@@ -23,11 +23,7 @@ class _EventPageState extends State<EventPage>{
               fit: BoxFit.contain,
               width: double.infinity,
             ),
-            Positioned(
-              top: 40,
-              left: 30,
-              right: 30,
-              child: Column(
+            Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Align(
@@ -63,93 +59,82 @@ class _EventPageState extends State<EventPage>{
                             fontWeight: FontWeight.w100),
                       ),
                     ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 110),
-              height: 300,
-              width: 400,
-              child: ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Image.asset("assets/slide1.png"),
-                  Image.asset("assets/slide2.png"),
-                  Image.asset("assets/slide3.png")
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 400),
-              height: 400,
-              width: 400,
-              child: ListView(
-                children: <Widget>[
-                  ListTile(
-                    trailing: Icon(Icons.more_vert),
-                    leading: Image.asset("assets/ad1.png"),
-                    title: Text("Awareness at Central University",
-                        style: TextStyle(
-                            fontFamily: "CentraleSansRegular",
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                        )),
-                    subtitle: Text("22nd Feburary,2020",
-                        style: TextStyle(
-                          fontFamily: "CentraleSansRegular",
-                          fontSize: 16,
-                        )),
                   ),
-                  ListTile(
-                    trailing: Icon(Icons.more_vert),
-                    leading: Image.asset("assets/ad2.png"),
-                    title: Text("Awareness at Corpus Christi Church",
-                        style: TextStyle(
-                            fontFamily: "CentraleSansRegular",
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                        )),
-                    subtitle: Text("15th March, 2020",
-                        style: TextStyle(
-                          fontFamily: "CentraleSansRegular",
-                          fontSize: 16,
-                        )),
+                  Container(
+                    height: 300,
+                    width: 400,
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Image.asset("assets/slide1.png"),
+                        Image.asset("assets/slide2.png"),
+                        Image.asset("assets/slide3.png")
+                      ],
+                    ),
                   ),
-                  ListTile(
-                    trailing: Icon(Icons.more_vert),
-                    leading: Image.asset("assets/ad4.png"),
-                    title: Text("Awareness at Atsiame, Volta Region",
-                        style: TextStyle(
-                            fontFamily: "CentraleSansRegular",
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                        )),
-                    subtitle: Text("29nd Feburary,2020",
-                        style: TextStyle(
-                          fontFamily: "CentraleSansRegular",
-                          fontSize: 16,
-                        )),
+                      ListTile(
+                        trailing: Icon(Icons.more_vert),
+                        leading: Image.asset("assets/ad1.png"),
+                        title: Text("Awareness at Central University",
+                            style: TextStyle(
+                                fontFamily: "CentraleSansRegular",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            )),
+                        subtitle: Text("22nd Feburary,2020",
+                            style: TextStyle(
+                              fontFamily: "CentraleSansRegular",
+                              fontSize: 16,
+                            )),
+                      ),
+                      ListTile(
+                        trailing: Icon(Icons.more_vert),
+                        leading: Image.asset("assets/ad2.png"),
+                        title: Text("Awareness at Corpus Christi Church",
+                            style: TextStyle(
+                                fontFamily: "CentraleSansRegular",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            )),
+                        subtitle: Text("15th March, 2020",
+                            style: TextStyle(
+                              fontFamily: "CentraleSansRegular",
+                              fontSize: 16,
+                            )),
+                      ),
+                      ListTile(
+                        trailing: Icon(Icons.more_vert),
+                        leading: Image.asset("assets/ad4.png"),
+                        title: Text("Awareness at Atsiame, Volta Region",
+                            style: TextStyle(
+                                fontFamily: "CentraleSansRegular",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            )),
+                        subtitle: Text("29nd Feburary,2020",
+                            style: TextStyle(
+                              fontFamily: "CentraleSansRegular",
+                              fontSize: 16,
+                            )),
+                      ),
+                      ListTile(
+                        trailing: Icon(Icons.more_vert),
+                        leading: Image.asset("assets/ad3.png"),
+                        title: Text("Awareness at Access Bank",
+                            style: TextStyle(
+                                fontFamily: "CentraleSansRegular",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            )),
+                        subtitle: Text("28th March, 2020",
+                            style: TextStyle(
+                              fontFamily: "CentraleSansRegular",
+                              fontSize: 16,
+                            )),
+                      ),
+                    ],
                   ),
-                  ListTile(
-                    trailing: Icon(Icons.more_vert),
-                    leading: Image.asset("assets/ad3.png"),
-                    title: Text("Awareness at Access Bank",
-                        style: TextStyle(
-                            fontFamily: "CentraleSansRegular",
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                        )),
-                    subtitle: Text("28th March, 2020",
-                        style: TextStyle(
-                          fontFamily: "CentraleSansRegular",
-                          fontSize: 16,
-                        )),
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       );
