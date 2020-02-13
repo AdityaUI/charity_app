@@ -14,7 +14,7 @@ class _SelfScreenState extends State<SelfScreen> {
   @override
   Widget build(BuildContext context) {
     return WebView(
-      initialUrl: 'http://runforacureghana.org/screening/',
+      initialUrl: 'https://knowyourlemons.com/english',
       onWebViewCreated: (WebViewController webViewController) {
       },
     );
