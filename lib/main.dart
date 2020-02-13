@@ -1,3 +1,4 @@
+import 'package:charity_app/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'views/login_page.dart';
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: HomePage(),
     );
   }
 }

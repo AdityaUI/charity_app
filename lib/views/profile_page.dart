@@ -1,7 +1,13 @@
+import 'package:charity_app/views/login_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
   bool val = false;
+
+  get onPressed => null;
+
+  get floatingActionButton => null;
+  // ignore: unused_element
   onSwitchValuseChanged(bool newVal){  void setState(Null Function() param0) {
     setState((){
       val = newVal;
@@ -22,7 +28,7 @@ class ProfilePage extends StatelessWidget {
               top: 60,
               left: 30,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text("My Profile",
                       style: TextStyle(
@@ -35,7 +41,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Positioned(
-                top: 515,
+                top: 490,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                     children: <Widget>[
@@ -107,22 +113,42 @@ class ProfilePage extends StatelessWidget {
                                   Text(
                                     "Notifications",
                                     style: TextStyle(
-                                        color: Colors.indigo,
+                                        color: Colors.purple,
                                         fontSize: 30,
                                         fontFamily: 'CentraleSansRegular',
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
                                   Switch(
+                                    inactiveThumbColor: Colors.black,
+                                    activeColor: Colors.orange,
                                       value: val,
                                       onChanged: (newVal){
                                         onSwitchValuseChanged(newVal);
                                       })
                                 ],
                               ),
+                              Container(
+                                height: 80,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [Colors.purple, Colors.deepOrangeAccent],
+                                  ),borderRadius: BorderRadius.circular(30)
+                                ),
+                                child: FloatingActionButton(
+                                    child: Text("Log In As Admin"),
+                                    onPressed:(){
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => Login()),
+                                      );
+                                    }
+
+                                ),
+                                ),
                             ],
                           ),
-
                         ],
                       ),
                     ]

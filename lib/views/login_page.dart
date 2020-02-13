@@ -1,4 +1,4 @@
-import 'package:charity_app/HomePage.dart';
+import 'package:charity_app/views/admincalender_page.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
 
@@ -75,27 +75,33 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: 20,),
-              Container(
-                width: 330,
-                height: 60,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xff6a1b9a),
-                      Color(0xff3cabff)
-                    ],
-                  ),
+              MaterialButton(
+                minWidth: 330,
+                height: 70,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(
+                        color: Color(0xff501396),
+                        width: 3
+                    )
                 ),
-                child: Center(
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "CentraleSansRegular",
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminCalender()));
+                },
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text(
+                      "LOGIN",
+                      style: TextStyle(
+                          color: Color(0xff501396),
+                          fontFamily: "CentraleSansRegular",
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
               SizedBox(height: 20,),
@@ -137,36 +143,7 @@ class _LoginState extends State<Login> {
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
-              MaterialButton(
-                minWidth: 330,
-                height: 70,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(
-                        color: Color(0xff501396),
-                        width: 3
-                    )
-                ),
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                },
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Text(
-                      "Continue as Guest",
-                      style: TextStyle(
-                          color: Color(0xff501396),
-                          fontFamily: "CentraleSansRegular",
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+
             ],
           ),
         ),

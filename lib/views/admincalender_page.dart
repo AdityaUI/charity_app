@@ -1,9 +1,11 @@
 import 'dart:convert';
+import 'package:charity_app/views/addevents_page.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class Calendar extends StatelessWidget {
+
+class  AdminCalender extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -126,6 +128,16 @@ class _HomePageState extends State<HomePage> {
             )),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed:(){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddEvent()),
+            );
+          }
+
       ),
     );
   }

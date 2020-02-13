@@ -1,9 +1,13 @@
+import 'package:charity_app/views/addevents_page.dart';
+import 'package:charity_app/views/login_page.dart';
 import 'package:charity_app/views/profile_page.dart';
 import 'package:charity_app/views/events_page.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
 import 'package:charity_app/views/calendar_page.dart';
 import 'package:charity_app/views/selfscreen_page.dart';
+import 'package:charity_app/views/admincalender_page.dart';
+
 
 
 
@@ -20,9 +24,11 @@ class _HomePageState extends State<HomePage> {
     EventPage(),
     Calendar(),
     SelfScreen(),
-    Container(),
-    Container(),
-    Container(),
+    AddEvent(),
+    Login(),
+    AdminCalender(),
+    HomePage()
+
   ];
 
   void onTabTapped(int index){
@@ -36,12 +42,13 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentIndex,
-        showSelectedLabels: false,
+        showSelectedLabels: true,
         showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
         selectedItemColor: Colors.purple,
-        elevation: 0,
-        iconSize: 32,
+        unselectedItemColor: Colors.black,
+        elevation: 5,
+        iconSize: 30,
 
         items: [
           BottomNavigationBarItem(
@@ -60,6 +67,8 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(LineAwesomeIcons.wheelchair),
             title: Text("Self Screening"),
           ),
+
+
         ],
       ),
       body: _children[_currentIndex],
