@@ -1,4 +1,6 @@
 import 'package:charity_app/views/addevents_page.dart';
+import 'package:charity_app/views/country_page.dart';
+import 'package:charity_app/views/language_page.dart';
 import 'package:charity_app/views/login_page.dart';
 import 'package:charity_app/views/profile_page.dart';
 import 'package:charity_app/views/events_page.dart';
@@ -27,7 +29,9 @@ class _HomePageState extends State<HomePage> {
     AddEvent(),
     Login(),
     AdminCalender(),
-    HomePage()
+    HomePage(),
+    CountryPage(),
+    LanguagePage(),
 
   ];
 

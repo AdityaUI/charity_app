@@ -1,6 +1,9 @@
+import 'package:charity_app/views/language_page.dart';
 import 'package:charity_app/views/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:charity_app/views/country_page.dart';
 
+// ignore: must_be_immutable
 class ProfilePage extends StatelessWidget {
   bool val = false;
 
@@ -25,12 +28,12 @@ class ProfilePage extends StatelessWidget {
               width: double.infinity,
             ),
             Positioned(
-              top: 60,
-              left: 30,
+              top: 70,
+              left: 90,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text("My Profile",
+                  Text("Profile Settings",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 35,
@@ -40,8 +43,9 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
+            
             Positioned(
-                top: 490,
+                top: 220,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                     children: <Widget>[
@@ -52,13 +56,34 @@ class ProfilePage extends StatelessWidget {
                             children: <Widget>[
                               Column(
                                 children: <Widget>[
-                                  Text(
-                                    "Ghana",
-                                    style: TextStyle(
-                                        color: Color(0xff7b1fa2),
-                                        fontSize: 35,
-                                        fontFamily: 'CentraleSansRegular',
-                                        fontWeight: FontWeight.bold),
+                                  MaterialButton(
+                                    minWidth: 270,
+                                    height: 50,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                        side: BorderSide(
+                                            color: Color(0xff501396),
+                                            width: 5
+                                        )
+                                    ),
+                                    onPressed: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage()));
+                                    },
+                                    child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: <Widget>[
+                                        Text(
+                                          "GHANA",
+                                          style: TextStyle(
+                                              color: Colors.purple,
+                                              fontFamily: "CentraleSansRegular",
+                                              fontSize: 32,
+                                              fontWeight: FontWeight.bold
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     "Location",
@@ -81,13 +106,34 @@ class ProfilePage extends StatelessWidget {
                               ),
                               Column(
                                 children: <Widget>[
-                                  Text(
-                                    "English",
-                                    style: TextStyle(
-                                        color: Color(0xffab47bc),
-                                        fontSize: 30,
-                                        fontFamily: 'CentraleSansRegular',
-                                        fontWeight: FontWeight.bold),
+                                  MaterialButton(
+                                    minWidth: 270,
+                                    height: 50,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                        side: BorderSide(
+                                            color: Color(0xff501396),
+                                            width: 5
+                                        )
+                                    ),
+                                    onPressed: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LanguagePage()));
+                                    },
+                                    child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: <Widget>[
+                                        Text(
+                                          "ENGLISH",
+                                          style: TextStyle(
+                                              color: Colors.purple,
+                                              fontFamily: "CentraleSansRegular",
+                                              fontSize: 32,
+                                              fontWeight: FontWeight.bold
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Text(
                                     "Language",
@@ -102,7 +148,7 @@ class ProfilePage extends StatelessWidget {
                                     "",
                                     style: TextStyle(
                                         color: Color(0xff3cabff),
-                                        fontSize: 13,
+                                        fontSize: 30,
                                         fontFamily: 'CentraleSansRegular',
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -118,16 +164,24 @@ class ProfilePage extends StatelessWidget {
                                         fontFamily: 'CentraleSansRegular',
                                         fontWeight: FontWeight.bold
                                     ),
+
                                   ),
+
                                   Switch(
                                     inactiveThumbColor: Colors.black,
                                     activeColor: Colors.orange,
                                       value: val,
                                       onChanged: (newVal){
                                         onSwitchValuseChanged(newVal);
-                                      })
+                                      }),
                                 ],
                               ),
+                              SizedBox(
+                                height: 95,
+                                width: 20,
+                              ),
+
+
                               Container(
                                 height: 80,
                                 width: 150,
