@@ -1,6 +1,5 @@
 import 'package:charity_app/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'views/login_page.dart';
 
 void main() => runApp(MyApp());
 
